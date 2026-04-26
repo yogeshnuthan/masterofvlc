@@ -1,15 +1,24 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0">
-  <modelVersion>4.0.0</modelVersion>
+<dependency>
+    <groupId>uk.co.caprica</groupId>
+    <artifactId>vlcj</artifactId>
+    <version>4.8.2</version>
+</dependency>
+  import uk.co.caprica.vlcj.player.component.EmbeddedMediaPlayerComponent;
 
-  <groupId>example</groupId>
-  <artifactId>vlc-project</artifactId>
-  <version>1.0</version>
+import javax.swing.JFrame;
 
-  <dependencies>
-    <dependency>
-      <groupId>uk.co.caprica</groupId>
-      <artifactId>vlcj</artifactId>
-      <version>4.8.2</version>
-    </dependency>
-  </dependencies>
-</project>
+public class VlcjExample {
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("VLCJ Player");
+        EmbeddedMediaPlayerComponent mediaPlayerComponent = new EmbeddedMediaPlayerComponent();
+
+        frame.setContentPane(mediaPlayerComponent);
+        frame.setSize(800, 600);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+
+        // Play media file
+        mediaPlayerComponent.mediaPlayer().media().play("C:\\path\\to\\your\\video.mp4");
+    }
+}
