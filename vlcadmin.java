@@ -2,7 +2,7 @@ import uk.co.caprica.vlcj.player.component.EmbeddedMediaPlayerComponent;
 
 import javax.swing.*;
 
-public class VlcPlayer {
+public class Vlcadmin {
     public static void main(String[] args) {
 
         JFrame frame = new JFrame("Simple VLC Player");
