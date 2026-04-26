@@ -1,2 +1,2 @@
-# masterofvlc
+# vlcadmin
 vlc
